@@ -1,0 +1,67 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    text-decoration: none;
+}
+body
+{
+    background-color: #eeeeee;
+    font-family:Arial;
+	font-size: 12px;
+	color: #222222;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+    display:block
+}
+p#announcement
+{
+	font-size: 44px;
+	font-weight: bold;
+	margin: 30px 70px 40px 90px;
+}
+article.info_panel
+{
+    background-color: white;
+    border: 1px #DBDBD8 solid;
+    border-radius:5px;
+    -webkit-box-shadow: 4px 4px 12px 0 #DDDCD8;
+    -moz-box-shadow: 4px 4px 12px 0 #DDDCD8;
+    box-shadow: 4px 4px 12px 0 #DDDCD8;
+	margin: 5px 70px;
+	padding: 20px;
+}
+article img
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+div.project_info
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 84%;
+}
+div.project_info h2
+{
+	text-transform: uppercase;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+div.project_info a:nth-child(0n+2)
+{
+	font-style: italic;
+	color:#222222;
+}
+div.project_info a:nth-child(0n+2):hover
+{
+	text-decoration:underline;
+}
+div.project_info p:last-child
+{
+	margin-top: 10px;
+}
+
