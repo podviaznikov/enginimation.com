@@ -1,7 +1,8 @@
 // enginimation.com
 // (c) 2011 Enginimation Studio (http://enginimation.com).
 var express = require('express'),
-    appCache = require('connect-app-cache'),
+    rootApp = express.createServer();
+
 rootApp.configure(function(){
     //app.use(connect.favicon(__dirname + '/public/16.png'));
     //logger
