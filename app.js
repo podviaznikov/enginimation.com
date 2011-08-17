@@ -1,18 +1,30 @@
 // enginimation.com
 // (c) 2011 Enginimation Studio (http://enginimation.com).
 var express = require('express'),
-    app = express.createServer();
-app.configure(function(){
+    appCache = require('connect-app-cache'),
+rootApp.configure(function(){
     //app.use(connect.favicon(__dirname + '/public/16.png'));
     //logger
-    app.use(express.logger());
+    rootApp.use(express.logger());
     //router
-    app.use(app.router);
+    rootApp.use(app.router);
     //public folder for static files
-    app.use(express.static(__dirname+'/public'));
+    rootApp.use(express.static(__dirname+'/public'));
+
 });
-app.get('/app.mf', function(req,res){
-    res.header("Content-Type", "text/cache-manifest");
-    res.sendfile(__dirname + '/app.mf');
+
+//catch all errors
+process.on('uncaughtException',function(err){
+  util.log(err);
 });
-exports.app=app;
+
+app.use(express.vhost('doublepick.enginimation.com', require('../doublepick/app').app));
+app.use(express.vhost('photospot.enginimation.com', require('../10diff/app').app));
+app.use(express.vhost('player.enginimation.com', require('../m.player/app').app));
+app.use(express.vhost('subtitler.enginimation.com', require('../subtitler/app').app));
+app.use(express.vhost('dropcut.enginimation.com', require('../dropcut/app').app));
+app.use(express.vhost('symboled.enginimation.com', require('../symboled/app').app));
+app.use(express.vhost('enginimation.com', require(rootApp));
+app.listen(80);
+
+util.log('started server.');
