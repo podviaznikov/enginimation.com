@@ -11,7 +11,6 @@ rootApp.configure(function(){
     rootApp.use(rootApp.router);
     //public folder for static files
     rootApp.use(express.static(__dirname+'/public'));
-
 });
 
 //catch all errors
