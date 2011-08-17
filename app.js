@@ -18,7 +18,8 @@ rootApp.configure(function(){
 process.on('uncaughtException',function(err){
   util.log(err);
 });
-
+//main app for serving all these simple apps
+var app = express.createServer();
 app.use(express.vhost('doublepick.enginimation.com',require('../doublepick/app').app));
 app.use(express.vhost('photospot.enginimation.com',require('../10diff/app').app));
 app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
