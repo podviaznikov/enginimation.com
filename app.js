@@ -8,7 +8,7 @@ rootApp.configure(function(){
     //logger
     rootApp.use(express.logger());
     //router
-    rootApp.use(app.router);
+    rootApp.use(rootApp.router);
     //public folder for static files
     rootApp.use(express.static(__dirname+'/public'));
 
