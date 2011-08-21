@@ -19,12 +19,12 @@ process.on('uncaughtException',function(err){
 });
 //main app for serving all these simple apps
 var app = express.createServer();
-app.use(express.vhost('doublepick.enginimation.com',require('../doublepick/app').app));
-app.use(express.vhost('photospot.enginimation.com',require('../10diff/app').app));
-app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
-app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
-app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
-app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
+//app.use(express.vhost('doublepick.enginimation.com',require('../doublepick/app').app));
+//app.use(express.vhost('photospot.enginimation.com',require('../10diff/app').app));
+//app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
+//app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
+//app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
+//app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
 app.use(express.vhost('tcomsucks.me',require('../worstcompany/app').app));
 app.use(express.vhost('enginimation.com',rootApp));
 app.listen(80);
