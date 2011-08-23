@@ -4,11 +4,8 @@ var express = require('express'),
     rootApp = express.createServer();
 
 rootApp.configure(function(){
-    //app.use(connect.favicon(__dirname + '/public/16.png'));
     //logger
     rootApp.use(express.logger());
-    //router
-    rootApp.use(rootApp.router);
     //public folder for static files
     rootApp.use(express.static(__dirname+'/public'));
 });
@@ -25,7 +22,7 @@ var app = express.createServer();
 //app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
 //app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
 //app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
-app.use(express.vhost('enginimation.com',rootApp));
-app.listen(8081);
+//app.use(express.vhost('enginimation.com',rootApp));
+rootApp.listen(8081);
 
 util.log('started server.');
