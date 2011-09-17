@@ -12,7 +12,7 @@ rootApp.configure(function(){
 
 //catch all errors
 process.on('uncaughtException',function(err){
-  util.log(err);
+  console.log(err);
 });
 //main app for serving all these simple apps
 var app = express.createServer();
@@ -25,4 +25,4 @@ app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app
 app.use(express.vhost('enginimation.com',rootApp));
 rootApp.listen(80);
 
-util.log('started server.');
+console.log('started server.');
