@@ -21,7 +21,7 @@ var app = express.createServer();
 //app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
 //app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
 //app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
-//app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
+app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
 app.use(express.vhost('enginimation.com',rootApp));
 rootApp.listen(8081);
 
