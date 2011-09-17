@@ -18,11 +18,12 @@ process.on('uncaughtException',function(err){
 var app = express.createServer();
 //app.use(express.vhost('doublepick.enginimation.com',require('../doublepick/app').app));
 //app.use(express.vhost('photospot.enginimation.com',require('../10diff/app').app));
-//app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
+app.use(express.vhost('player.enginimation.com',require('../m.player/app').app));
 //app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
 //app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
 app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
-//app.use(express.vhost('enginimation.com',rootApp));
-rootApp.listen(80);
+/app.use(express.vhost('enginimation.com',rootApp));
+app.listen(80);
+//require('../symboled/app').app.listen(8081)
 
 console.log('started server.');
