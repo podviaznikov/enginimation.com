@@ -4,10 +4,10 @@ var express = require('express'),
     rootApp = express.createServer();
 
 rootApp.configure(function(){
-    //logger
-    rootApp.use(express.logger());
-    //public folder for static files
-    rootApp.use(express.static(__dirname+'/public'));
+  //logger
+  rootApp.use(express.logger());
+  //public folder for static files
+  rootApp.use(express.static(__dirname+'/public'));
 });
 
 //catch all errors
@@ -22,7 +22,7 @@ var app = express.createServer();
 //app.use(express.vhost('subtitler.enginimation.com',require('../subtitler/app').app));
 //app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
 //app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
-//app.use(express.vhost('enginimation.com',rootApp));
+app.use(express.vhost('enginimation.com',rootApp));
 rootApp.listen(8081);
 
 util.log('started server.');
