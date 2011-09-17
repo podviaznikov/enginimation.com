@@ -23,6 +23,6 @@ var app = express.createServer();
 //app.use(express.vhost('dropcut.enginimation.com',require('../dropcut/app').app));
 app.use(express.vhost('symboled.enginimation.com',require('../symboled/app').app));
 app.use(express.vhost('enginimation.com',rootApp));
-rootApp.listen(8081);
+rootApp.listen(80);
 
 util.log('started server.');
