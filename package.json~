@@ -2,7 +2,7 @@
   "author": "Enginimation Studio <hello@enginimation.com> (http://enginimation.com)",
   "name": "enginimation.com",
   "description": "Main site for enginimation.com",
-  "version": "0.6.1",
+  "version": "0.6.0",
   "homepage": "http://enginimation.com",
   "repository": {
     "type": "git",
